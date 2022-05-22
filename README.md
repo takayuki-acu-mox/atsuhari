@@ -1,24 +1,48 @@
-# README
+# アプリケーション名  
+あつまれ！はりきゅうの森
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+施術内容をシェアし、お互い情報を共有できるアプリケーション
 
-Things you may want to cover:
+# URL
 
-* Ruby version
+# テスト用アカウント
 
-* System dependencies
+# 利用方法
 
-* Configuration
+## 施術内容投稿
+1.トップページのヘッダーからユーザー登録を行う
+2.新規投稿ボタンから、施術内容（タイトル、詳細、図、カテゴリー）を入力し投稿する
+3.自身の投稿にコメント（質問）がきたらコメント入力フォームから返信する
 
-* Database creation
+## 施術内容検索
+1.トップページから知りたい施術内容の検索を行う
+2.施術に関する質問があれば、コメント欄から質問を送信する
+3.気に入った施術内容はお気に入りに登録する
+4.マイページのお気に入り一覧ボタンをクリックくすると、お気に一覧がみられる
 
-* Database initialization
 
-* How to run the test suite
+# アプリケーションを作製した背景
+新卒の鍼灸師は施術にこまることが多い。特に、年齢的に就職が難しい新卒生は相談相手も少なく一人で考えなければならない。鍼灸師同士が繋がり、新卒生はもとより、全ての鍼灸師の情報交換の場所が必要だと考えた。一人で悩む鍼灸師が治療方法やアドバイスを入手できるSNSアプリケーションを開発することにした。
 
-* Services (job queues, cache servers, search engines, etc.)
+# 洗い出した要件
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1Iornk2FiQOjZeWALvPFTZoW3DC81e3KgkgiEI2xwsDs/edit#gid=982722306)
 
-* Deployment instructions
+# 実装した機能についての画像やGIFおよびその説明
 
-* ...
+# 実装予定の機能
+基本的な実装を終えた後は、質問フォーム（特定のユーザーに質問を送れる）や、コメント通知機能を実装予定。
+
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/430c82f1e112c14513926c010142aee0.png)](https://gyazo.com/430c82f1e112c14513926c010142aee0)
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/2622fb71c1a3b921c399575f0cd8deb2.png)](https://gyazo.com/2622fb71c1a3b921c399575f0cd8deb2)
+
+# 開発環境
+Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code / JavaScript
+
+# ローカルでの動作方法
+
+# 工夫したポイント

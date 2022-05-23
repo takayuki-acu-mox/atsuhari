@@ -1,0 +1,14 @@
+<div class="square_box"></div>
+<ul class="contents">
+  <% @categories.each do |category| %>
+    <li class="content_post">
+    <div class="output_image">
+        <%= category.image %>
+        </div>
+      <p class="name">
+        <%= category.name %>
+      </p>
+    </li>
+  <% end %>
+  </ul>
+</div>

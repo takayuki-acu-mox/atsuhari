@@ -1,0 +1,10 @@
+<div class="card">
+  <%= link_to image_tag(therapy.image, class: :card__img ), root_path, method: :get %>
+  <div class="card__body">
+    <%= link_to therapy.title, root_path, method: :get, class: :card__title%>
+    <p class="card__summary">
+      <%= therapy.text %>
+    </p>
+    <%= link_to "by #{therapy.user.nickname}" , root_path, class: :card__user %>
+  </div>
+</div>

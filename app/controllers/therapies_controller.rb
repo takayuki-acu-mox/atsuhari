@@ -1,4 +1,5 @@
 class TherapiesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show, :edit]
 
 
   def index
@@ -26,6 +27,9 @@ class TherapiesController < ApplicationController
 
   def edit
     @therapy = Therapy.find(params[:id])
+    unless @therapy.user_id == current_user.id
+      redirect_to action: :index
+    end
   end
 
   def update

@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "therapies#index"
 
-  resources :therapies, only: [:index, :new, :create, :show, :edit, :update]
+  resources :therapies, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 end

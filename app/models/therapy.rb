@@ -3,6 +3,7 @@ class Therapy < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_one_attached :image
+  has_many :comments
 
   validates :title, :text, presence: true
   validates :text, :text, presence: true

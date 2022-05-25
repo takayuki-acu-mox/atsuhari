@@ -18,6 +18,23 @@ class TherapiesController < ApplicationController
     end
   end
 
+  def show
+    @therapy = Therapy.find(params[:id])
+  end
+
+  def edit
+    @therapy = Therapy.find(params[:id])
+  end
+
+  def update
+    @therapy = Therapy.find(params[:id])
+    if @therapy.update(therapy_params)
+      redirect_to therapy_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def therapy_params

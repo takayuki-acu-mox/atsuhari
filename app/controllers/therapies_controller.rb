@@ -20,6 +20,8 @@ class TherapiesController < ApplicationController
 
   def show
     @therapy = Therapy.find(params[:id])
+    @comments = @therapy.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def edit

@@ -30,27 +30,26 @@
           </p>
         </div>
       </div>
-      <div class="prototype__comments">
-        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-          <%# <%= form_with model: モデル名,local: true do |f|%>
-            <div class="field">
-              <%# <%= f.label :hoge, "コメント" %><br />
-              <%# <%= f.text_field :hoge, id:"comment_content" %>
-            </div>
-            <div class="actions">
-              <%# <%= f.submit "送信する", class: :form__btn  %>
-            </div>
-          <%# <% end %>
-        <%# // ログインしているユーザーには上記を表示する %>
-        <ul class="comments_lists">
-          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
-            <li class="comments_list">
-              <%# <%= " コメントのテキスト "%>
-              <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
-            </li>
-          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
-        </ul>
+
+<div id="comments">
+  <h4>＜コメント一覧＞</h4>
+    <% @therapy.comments.each do |comment| %>
+      <div class="comment">
+        <p class="user-info"><%= comment.user.nickname %>： </p>
+        <p><%= comment.text%></p>
       </div>
+    <% end %>
+</div>
+
+      <div class="comment-form">
+  <% if user_signed_in? %>
+    <%= form_with model: [@therapy, @comment], id: "comment-form" do |f| %>
+      <%= f.text_area :text , class: "comment-text"%>
+      <%= f.submit "コメントをする", class: "comment-submit" %>
+    <% end %>
+  <% end %>
+</div>
+
     </div>
   </div>
 </main>

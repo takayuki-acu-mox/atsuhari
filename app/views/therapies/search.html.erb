@@ -1,0 +1,37 @@
+<h3>検索ページ</h3>
+<h3><%= link_to 'トップページへ戻る', root_path%></h3>
+<div class='item-contents' id="detailed-search-result-wrapper">
+  <%= search_form_for @q, url: search_therapies_path, html: {id: "detailed-search-form"} do |f| %>
+    <div class="search-field">
+      <%= f.label :title, '治療内容' %>
+      <br>
+       <%= f.text_field :title, placeholder: '治療内容', value: params[:q]&.dig(:title) %>
+    </div>
+    
+<div class="search-field">
+      <%= f.label :user_nickname_cont, '投稿者名' %>
+      <br>
+      <%= f.text_field :user_nickname_cont, placeholder: '投稿者名' %>
+    </div>
+
+<div class="search-field">
+     <%= f.label :category_id_in, 'カテゴリ' %>
+      <br>
+      <%= f.collection_check_boxes(:category_id_in, Category.all, :id, :name, {include_blank: "---"}) %>
+    </div>
+
+    <%= f.submit '検索' %>
+  <% end %>
+  <ul class='item-lists' id="detailed-search-result">
+    <% @therapies.each do |therapy| %>
+      <li class='list'>
+        <div class="posted-content">
+          <%= image_tag therapy.image.variant(resize: '500x500') %><br>
+          <%= therapy.title%><br>
+          <%= link_to '詳細', therapy_path(therapy.id)%>
+          <%= link_to "by #{therapy.user.nickname}" , user_path(therapy.user.id), class: :card__user %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,5 +1,10 @@
+#comments{
+  background-color: #fff;
+  padding-left: 10px;
+}
+
 .comment-form{
-  display: flex;
+  display: block;
 }
 
 .comment-text{
@@ -9,7 +14,9 @@
 
 .comment-submit{
   display: block;
-  margin-top: 20px;
+  margin: 20px auto;
+  background-color: #51b0e4;
+  color: #fff;
 }
 
 .comment{
@@ -24,3 +31,4 @@
   color: gray;
   font-weight: bold;
 }
+

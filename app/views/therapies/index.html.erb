@@ -7,7 +7,7 @@
         <%= "こんにちは、" %>
         <%= link_to "#{current_user.nickname}さん", user_path(current_user.id),class: :greeting__link%>
        </div>
-       <h3><%= link_to '商品検索', search_therapies_path%></h3>
+       <h3><%= link_to '治療検索はこちら', search_therapies_path, class: :search%></h3>
        <% end %>
 
     <%# // ログインしているときは上記を表示する %>

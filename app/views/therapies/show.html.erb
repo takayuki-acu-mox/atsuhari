@@ -25,7 +25,7 @@
         </div>
         <div class="prototype__detail">
           <p class="detail__title">カテゴリー</p>
-          <p class="detail__message">
+          <p class="detail__message_under">
             <%= @therapy.category.name %>
           </p>
         </div>
@@ -44,7 +44,7 @@
       <div class="comment-form">
   <% if user_signed_in? %>
     <%= form_with model: [@therapy, @comment], id: "comment-form" do |f| %>
-      <%= f.text_area :text , class: "comment-text"%>
+      <%= f.text_area :text , autofocus: true, class: "comment-text"%>
       <%= f.submit "コメントをする", class: "comment-submit" %>
     <% end %>
   <% end %>

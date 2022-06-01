@@ -1,5 +1,5 @@
 <div class="card">
-  <%= link_to image_tag(therapy.image, class: :card__img ), therapy_path(therapy), method: :get %>
+  <%= link_to image_tag(therapy.image.variant(resize: '200x150'), class: :card__img, resize: '193x158' ), therapy_path(therapy), method: :get %>
   <div class="card__body">
     <%= link_to therapy.title, therapy_path(therapy), method: :get, class: :card__title%>
     <p class="card__summary">

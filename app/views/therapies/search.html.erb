@@ -1,5 +1,5 @@
-<h3>検索ページ</h3>
-<h3><%= link_to 'トップページへ戻る', root_path%></h3>
+<h3 class = "search_page" >検索ページ</h3>
+<h3 class = "search_page"><%= link_to 'トップページへ戻る', root_path%></h3>
 <div class='item-contents' id="detailed-search-result-wrapper">
   <%= search_form_for @q, url: search_therapies_path, html: {id: "detailed-search-form"} do |f| %>
     <div class="search-field">
@@ -19,14 +19,15 @@
       <br>
       <%= f.collection_check_boxes(:category_id_in, Category.all, :id, :name, {include_blank: "---"}) %>
     </div>
-
+<div class="submit">
     <%= f.submit '検索' %>
+    </div>
   <% end %>
   <ul class='item-lists' id="detailed-search-result">
     <% @therapies.each do |therapy| %>
       <li class='list'>
         <div class="posted-content">
-          <%= image_tag therapy.image.variant(resize: '500x500') %><br>
+          <%= image_tag therapy.image.variant(resize: '200x150') %><br>
           <%= therapy.title%><br>
           <%= link_to '詳細', therapy_path(therapy.id)%>
           <%= link_to "by #{therapy.user.nickname}" , user_path(therapy.user.id), class: :card__user %>

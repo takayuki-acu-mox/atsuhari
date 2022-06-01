@@ -18,6 +18,7 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  background-color: #f2f2f2f2;
 }
 
 li {
@@ -37,7 +38,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: #51b0e4;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -49,19 +50,22 @@ a {
 .nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .logo {
-  width: 200px;
+  width: 300px;
 }
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+  font-size: 1.0em;
+  color: #fff;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 2px #fff solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
@@ -73,8 +77,8 @@ a {
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+  font-size: 1.0em;
+  color: #fff;
   text-decoration: none;
   user-select: none;
 }
@@ -100,6 +104,7 @@ a {
 }
 
 .form__btn{
+  width: 100px;
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -120,26 +125,42 @@ a {
 
 /* メイン */
 
+.search {
+  display: block;
+  width: 20%;
+  text-align: center;
+  color: #f2f2f2;
+  background-color: #51b0e4;
+  padding: 3px 10px;
+  margin-left: 4px;
+  margin-bottom: 30px;
+}
+
 .greeting{
   margin-bottom: 20px;
 }
 .greeting__link{
   text-decoration: underline;
+  text-decoration: none;
 }
 .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
 }
 .card__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  margin-top: 10px;
   min-height: calc(100vh - 161px);
 }
+
 .card {
   width: calc((100% - 50px) / 3);
+  height: 300px;
   margin-bottom: 40px;
+  background-color: #fff;
+  text-align: center;
+  display: inline-block;
+  margin: 0 5px 10px 5px; 
 }
 .card__img {
   margin-bottom: 16px;
@@ -152,13 +173,19 @@ a {
 }
 .card__summary {
   font-size: 16px;
+  width: 90%;                /* 横幅を200pxに指定 */
+  height: 72px;               /* 横幅を200pxに指定 */
+  margin: 0 auto;
+  border: 2px solid #51b0e4;      /* わかりやすくボーダーを引く */
+  overflow-y: scroll;  
 }
 .card__user {
   display: block;
   font-size: 12px;
-  color: #999;
+  color: #51b0e4;
   text-align: right;
   text-decoration: underline;
+  padding-right: 15px;
 }
 
 /* 詳細ページ */
@@ -173,25 +200,48 @@ a {
 .prototype__user{
   display: block;
   font-size: 16px;
-  color: #999;
+  color: #51b0e4;
   text-align: center;
   text-decoration: underline;
 }
+
+#prototype_title{
+width: 50%;
+}
+
+#prototype_image{
+  width: 40%;
+}
+
 .prototype__image{
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
+  text-align: center;
 }
 .prototype__detail{
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 .detail__title{
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
+
+.detail__message{
+  font-size: 20px;
+  width: 100%;                /* 横幅を200pxに指定 */
+  height: 72px;               /* 横幅を200pxに指定 */
+  margin: 0 auto;
+  border: 2px solid #51b0e4;      /* わかりやすくボーダーを引く */
+  overflow-y: scroll;  
+  background-color: #fff;
+}
+
 .prototype__manage{
   display: flex;
   justify-content: center;
@@ -213,6 +263,7 @@ a {
   color: #fff;
   background: #999;
 }
+
 
 .prototype__comments{
   background-color: #f6f6f6;
@@ -245,9 +296,10 @@ a {
   width: 50%;
 }
 .table__col1{
-  text-align: left;
+  text-align: center;
   font-weight: bold;
-  background: #fafafa;
+  background: #ffa000;
+  color: #fff;
   border-collapse: collapse;
   border: 1px solid #f5f5f5;
   width: 30%;
@@ -261,15 +313,27 @@ a {
   padding: 16px 8px;
 }
 .user__card {
-  display: flex;
+  display: block;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
+
+/* 新規登録ページ */
+#user_email, #user_password, #user_password_confirmation, #user_name{
+  width: 30%;
+}
+
+.form__wrapper{
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
 /* フッター */
 
 .footer {
-  background-color: #999;
+  background-color: #51b0e4;
   padding: 10px 0;
 }
 .copyright {
@@ -296,10 +360,11 @@ a {
   }
 }
 
+
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
-    width: 120px;
+    width: 180px;
   }
   .page-heading {
     font-size: 20px;

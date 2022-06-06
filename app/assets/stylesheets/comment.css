@@ -1,6 +1,7 @@
 #comments{
   background-color: #fff;
   padding-left: 10px;
+  box-shadow: 0 0 10px rgb(41 41 41 / 20%);
 }
 
 .comment-form{
@@ -17,6 +18,7 @@
   margin: 20px auto;
   background-color: #51b0e4;
   color: #fff;
+  width: 30%;
 }
 
 .comment{

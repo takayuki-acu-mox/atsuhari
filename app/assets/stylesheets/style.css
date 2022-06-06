@@ -161,6 +161,7 @@ a {
   text-align: center;
   display: inline-block;
   margin: 0 5px 10px 5px; 
+  box-shadow: 0 0 10px rgb(41 41 41 / 20%);
 }
 .card__img {
   margin-bottom: 16px;
@@ -178,6 +179,8 @@ a {
   margin: 0 auto;
   border: 2px solid #51b0e4;      /* わかりやすくボーダーを引く */
   overflow-y: scroll;  
+  text-align: left;
+  padding: 0 5px;
 }
 .card__user {
   display: block;
@@ -235,11 +238,12 @@ width: 50%;
 .detail__message{
   font-size: 20px;
   width: 100%;                /* 横幅を200pxに指定 */
-  height: 72px;               /* 横幅を200pxに指定 */
+  height: 200px;               /* 横幅を200pxに指定 */
   margin: 0 auto;
   border: 2px solid #51b0e4;      /* わかりやすくボーダーを引く */
   overflow-y: scroll;  
   background-color: #fff;
+  text-align: left;
 }
 
 .prototype__manage{

@@ -8,10 +8,10 @@
 https://atsuhari.herokuapp.com/
 
 # テスト用アカウント
-・Basic認証ID：takayuki
-・BasicPASS：2222
-・メールアドレス：taka@taka.com
-・パスワード：111aaa
+*Basic認証ID：takayuki
+*BasicPASS：2222
+*メールアドレス：taka@taka.com
+*パスワード：111aaa
 
 # 利用方法
 
@@ -51,5 +51,5 @@ Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code / JavaScript
 # ローカルでの動作方法
 
 # 工夫したポイント
-・コメントを表示するためにリロードをするのは使い勝手が悪いため、コメントの実装をAjaxで実装した。
-・文字数によってブロックの大きさが変わるとレイアウトが崩れてしまうため、スクロール機能を実装した。。
+*コメントを表示するためにリロードをするのは使い勝手が悪いため、コメントの実装をAjaxで実装した。
+*文字数によってブロックの大きさが変わるとレイアウトが崩れてしまうため、スクロール機能を実装した。。

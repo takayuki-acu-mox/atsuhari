@@ -28,6 +28,7 @@ li {
 img {
   max-width: 100%;
   vertical-align: bottom;
+  border-radius: 10px;
 }
 
 a {
@@ -165,6 +166,7 @@ a {
 }
 .card__img {
   margin-bottom: 16px;
+  margin-top: 10px;
 }
 .card__title {
   display: block;
@@ -244,6 +246,8 @@ width: 50%;
   overflow-y: scroll;  
   background-color: #fff;
   text-align: left;
+  padding: 10px;
+  font-family: auto;
 }
 
 .prototype__manage{
@@ -339,6 +343,7 @@ width: 50%;
 .footer {
   background-color: #51b0e4;
   padding: 10px 0;
+  margin-top: 30px;
 }
 .copyright {
   text-align: center;
@@ -367,15 +372,30 @@ width: 50%;
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
-    width: 180px;
+  .header{
+margin-bottom: 10px;
   }
+
+  .logo {
+    width: 300px;
+  }
+
+  .nav__btn{
+    padding: 0.2em 0.4em;
+    margin-left: 30px;
+    margin-bottom: 2px;
+  }
+
+  .nav__logout{
+margin-left: 20px;
+  }
+
   .page-heading {
     font-size: 20px;
   }
   .card {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .card__title {
     font-size: 18px;
@@ -389,4 +409,12 @@ width: 50%;
   .table{
     width: 100%;
   }
+
+.search{
+  width: 50%;
+}
+
+input{
+  width: 10%;
+}
 }

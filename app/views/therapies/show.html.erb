@@ -45,7 +45,7 @@
   <% if user_signed_in? %>
     <%= form_with model: [@therapy, @comment], id: "comment-form" do |f| %>
       <%= f.text_area :text , autofocus: true, class: "comment-text"%>
-      <%= f.submit "コメントをする", class: "comment-submit" %>
+      <%= f.submit "コメント", class: "comment-submit" %>
     <% end %>
   <% end %>
 </div>

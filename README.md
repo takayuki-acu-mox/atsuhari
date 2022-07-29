@@ -34,6 +34,15 @@ https://atsuhari.herokuapp.com/
 [要件を定義したシート](https://docs.google.com/spreadsheets/d/1Iornk2FiQOjZeWALvPFTZoW3DC81e3KgkgiEI2xwsDs/edit#gid=982722306)
 
 # 実装した機能についての画像やGIFおよびその説明
+*Top画面：投稿した治療方法の一覧が表示されます。
+https://i.gyazo.com/2a9800a4322bacada52f416a2263f4a7.png
+
+*検索画面：調べたい疾患を検索できます。
+https://i.gyazo.com/ae4e52980682e670d7f9b27dd36b5bc4.png
+
+*コメント画面：投稿者と非同期でコメントのやり取りができます。
+https://i.gyazo.com/cab38fc1f5f879f43bab37b55e7000c9.png
+
 
 # 実装予定の機能
 基本的な実装を終えた後は、質問フォーム（特定のユーザーに質問を送れる）や、コメント通知機能を実装予定。
@@ -47,8 +56,6 @@ https://atsuhari.herokuapp.com/
 
 # 開発環境
 Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code / JavaScript
-
-# ローカルでの動作方法
 
 # 工夫したポイント
 *コメントを表示するためにリロードをするのは使い勝手が悪いため、コメントの実装をAjaxで実装した。
